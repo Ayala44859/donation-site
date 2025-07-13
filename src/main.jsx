@@ -1,3 +1,8 @@
+/**
+ * Entry point for the React app.
+ * Renders the App component inside the root div, wrapped with React Router and StrictMode.
+ */
+
 import React from 'react'; 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'

@@ -1,3 +1,9 @@
+/**
+ * Navigation bar component.
+ * Provides links to donation list and form, and currency toggle buttons (Shekel/Dollar).
+ * Uses Material-UI for styling.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Button, Typography } from '@mui/material';

@@ -1,3 +1,9 @@
+/**
+ * Donation list component.
+ * Shows all donations, supports searching by donor name and sorting by amount or date.
+ * Uses the Don component for each donation.
+ */
+
 import React, { useState } from "react";
 import Don from './Don'; 
 

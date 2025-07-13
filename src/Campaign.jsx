@@ -1,3 +1,8 @@
+/**
+ * Campaign media component.
+ * Displays campaign video. Simple presentational component.
+ */
+
 import React from 'react';
 import { useState } from "react";
 

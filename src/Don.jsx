@@ -1,3 +1,8 @@
+/**
+ * Single donation item component.
+ * Displays a donation, including formatted date and currency conversion.
+ */
+
 import React from 'react';
 import { fromIlsToCoin } from "./Utils";
 

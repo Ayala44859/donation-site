@@ -1,3 +1,9 @@
+/**
+ * Utility functions for currency conversion.
+ * - fromIlsToCoin(sum, type, rate)
+ * - fromCoinToShekel(sum, type, rate)
+ */
+
 export function fromIlsToCoin(sum,type,rate){
         console.log("fromIlsToCoin called with:", { sum, type, rate });
 

@@ -1,3 +1,8 @@
+/**
+ * Campaign progress bar component.
+ * Displays the current sum vs. the goal, currency symbol, percentage, and donor count.
+ */
+
 import React, { useState, useEffect } from "react";
 import { fromIlsToCoin } from "./Utils";
 

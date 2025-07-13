@@ -1,3 +1,8 @@
+/**
+ * Donation form component.
+ * Handles input validation (name, amount), manages form state, and calls the add-donation handler on submit.
+ */
+
 import React from 'react';
 import { useState } from "react";
 

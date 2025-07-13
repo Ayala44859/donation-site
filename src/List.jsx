@@ -1,3 +1,8 @@
+/**
+ * Alternative donation list component.
+ * Supports searching, sorting, and filtering donations.
+ */
+
 import React from 'react';
 import { useState } from "react";
 import Don from "./Don";

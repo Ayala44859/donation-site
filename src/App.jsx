@@ -1,3 +1,9 @@
+/**
+ * Main application component.
+ * Manages global state: donations, current sum, donor count, currency, and routing.
+ * Handles adding new donations and syncing with localStorage.
+ */
+
 import { useEffect, useState } from 'react'
 import React from 'react';
 import './App.css'
