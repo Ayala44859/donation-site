@@ -1,0 +1,304 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+ /* NavBar */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* direction: rtl; */
+}
+/* Reset styles */
+
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f3f2; /* ורוד בהיר-בז' */
+  color: #4f4a48; /* צבע טקסט כהה-בז' */
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* NavBar */
+nav {
+  background-color: #d8a7b1; /* ורוד בהיר */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0 30px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav button {
+  
+  background-color: #fff;
+  border: 1px solid #d8a7b1;
+  color: #d8a7b1;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px; /* רווח בין הכפתורים */
+  
+}
+
+nav button:hover {
+  background-color: #d8a7b1;
+  color: white;
+}
+
+/* Donation Progress Bar */
+.progress-container {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 700px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 30px;
+  background-color: #e2d1d1; /* בז' כהה */
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #d8a7b1;
+  border-radius: 15px;
+}
+
+.progress-info {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.progress-info span {
+  font-weight: bold;
+}
+
+/* Donation Form */
+.donFile {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.donFile label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #d8a7b1;
+}
+
+.donFile input[type="text"],
+.donFile input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border: 1px solid #e2d1d1;
+  border-radius: 5px;
+  background-color: #f9f7f7;
+  color: crimson;
+}
+
+.donFile input[type="text"]:focus,
+.donFile input[type="number"]:focus {
+  border-color: #d8a7b1;
+  outline: none;
+  background-color: #c47e7e;
+  color: #fdfafa;
+}
+
+.donFile input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #d8a7b1;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* רווח מעל כפתור שליחה */
+}
+
+.donFile input[type="submit"]:hover {
+  background-color: #d07a87; /* ורוד כהה */
+}
+
+.donFile div {
+  background-color: #ffcccc; /* אדום בהיר */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* List of Donations */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  width: 700px;
+}
+
+button {
+  padding: 5px;
+  font-size: 15px;
+  background-color: #d8a7b1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* רווח בין הכפתורים */
+}
+
+button:hover {
+  background-color: #d07a87;
+}
+
+/* Individual Donation Item */
+.donation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.donation-item h2 {
+  margin-bottom: 10px;
+  color: #d8a7b1;
+}
+
+.donation-item .dedication {
+  font-size: 1.2em;
+  color: #4f4a48;
+}
+
+.donation-item .date {
+  font-size: 1em;
+  color: #b1a7a1; /* צבע בז' בהיר */
+}
+input{
+  padding: 10px;
+  font-size: 15px;
+  background-color: #d8a7b1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; /* רווח בין הכפתורים */
+}
