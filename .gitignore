@@ -1,3 +1,4 @@
+# Existing .gitignore content (your provided one)
 /node_modules
 
 # Build files
@@ -19,3 +20,7 @@ yarn-error.log*
 # IDE / Editor folders
 .idea
 .vscode
+
+# --- New additions for Backend ---
+backend/node_modules/ # Important: ignore node_modules specific to the backend folder
+backend/.env          # Important: ignore .env specific to the backend folder

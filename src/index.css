@@ -1,72 +1,5 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* src/index.css */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
- /* NavBar */
 /* Reset styles */
 * {
   margin: 0;
@@ -75,10 +8,8 @@ button:focus-visible {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  /* direction: rtl; */
+  /* direction: rtl; - אם רוצים שכל האפליקציה תהיה מימין לשמאל, הגדר ב-App.css או ב-body*/
 }
-/* Reset styles */
-
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -109,8 +40,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* כפתורי הניווט בתוך ה-NavBar */
+/* ה-Material-UI NavBar כבר מטפל בכפתורים בתוכו, אבל אם תרצי עיצוב מותאם אישית לכפתורים שם: */
+/*
 nav button {
-  
   background-color: #fff;
   border: 1px solid #d8a7b1;
   color: #d8a7b1;
@@ -120,14 +53,15 @@ nav button {
   border-radius: 5px;
   margin-top: 20px;
   transition: all 0.3s ease;
-  margin-bottom: 10px; /* רווח בין הכפתורים */
-  
+  margin-bottom: 10px;
 }
 
 nav button:hover {
   background-color: #d8a7b1;
   color: white;
 }
+*/
+
 
 /* Donation Progress Bar */
 .progress-container {
@@ -220,7 +154,7 @@ nav button:hover {
   background-color: #d07a87; /* ורוד כהה */
 }
 
-.donFile div {
+.donFile div { /* עבור הודעות שגיאה בטופס */
   background-color: #ffcccc; /* אדום בהיר */
   padding: 10px;
   margin-top: 10px;
@@ -234,71 +168,76 @@ ul {
   padding: 0;
 }
 
-li {
+li { /* עוטף כל פריט תרומה */
   background-color: #fff;
   padding: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: auto;
+  margin: auto; /* ממורכז */
   margin-bottom: 7px;
   margin-top: 7px;
   width: 700px;
 }
 
+/* **העיצוב הכללי לכפתורים (שצריך להיות קיים)** */
+/* כל כפתור שלא בתוך NavBar מקבל את העיצוב הזה */
 button {
-  padding: 5px;
-  font-size: 15px;
-  background-color: #d8a7b1;
-  color: white;
-  border: none;
+  padding: 8px 15px; /* פאדינג נוח */
+  font-size: 1em; /* גודל פונט הגיוני */
+  background-color: #d8a7b1; /* ורוד בהיר - צבע הכפתורים שלנו */
+  color: white; /* טקסט לבן */
+  border: none; /* ללא בורדר */
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 10px; /* רווח בין הכפתורים */
   transition: background-color 0.3s ease;
-  margin-bottom: 10px; /* רווח בין הכפתורים */
+  /* margin-bottom: 10px; - הוסר מכאן, נכנס ל-donation-actions */
 }
 
 button:hover {
   background-color: #d07a87;
 }
 
-/* Individual Donation Item */
+/* Individual Donation Item - עיצוב לכל פריט תרומה */
 .donation-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* יישור לשמאל (כי זה RTL) */
   padding: 20px;
-  margin: 10px 0;
+  margin: 10px auto; /* ממורכז */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  
+  width: 700px; /* רוחב עקבי */
 }
 
-.donation-item h2 {
-  margin-bottom: 10px;
-  color: #d8a7b1;
+.donation-item p {
+  margin-bottom: 8px; /* רווח בין פסקאות המידע */
+  color: #4f4a48; /* צבע טקסט */
+}
+/* הסרתי h2, dedication ו-date מה-donation-item כאן כי הם לא צריכים להיות שם ספציפית */
+
+/* **העיצוב עבור עוטף כפתורי המחיקה/עריכה** */
+.donation-actions {
+  margin-top: 15px; /* רווח מעל הכפתורים */
+  display: flex; /* כדי שהכפתורים יהיו בשורה */
+  gap: 10px; /* רווח בין הכפתורים */
 }
 
-.donation-item .dedication {
-  font-size: 1.2em;
-  color: #4f4a48;
-}
-
-.donation-item .date {
-  font-size: 1em;
-  color: #b1a7a1; /* צבע בז' בהיר */
-}
-input{
+/* **עיצוב עבור input החיפוש ב-DonationList** */
+.donation-search-input {
+  width: calc(100% - 20px); /* רוחב מלא עם מרווחים */
   padding: 10px;
-  font-size: 15px;
-  background-color: #d8a7b1;
-  color: white;
-  border: none;
-  cursor: pointer;
+  font-size: 1em;
+  margin: 10px auto 20px auto; /* ממורכז עם רווח תחתון */
+  border: 1px solid #e2d1d1;
   border-radius: 5px;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-  margin-bottom: 10px; /* רווח בין הכפתורים */
+  background-color: #f9f7f7;
+  color: #4f4a48;
+  display: block; /* כדי שיתפוס רוחב מלא */
+}
+.donation-search-input:focus {
+  border-color: #d8a7b1;
+  outline: none;
 }

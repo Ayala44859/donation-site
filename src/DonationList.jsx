@@ -1,3 +1,4 @@
+// DonationList.jsx
 /**
  * Donation list component.
  * Shows all donations, supports searching by donor name and sorting by amount or date.
@@ -5,10 +6,10 @@
  */
 
 import React, { useState } from "react";
-import Don from './Don'; 
+import Don from './Don';
 
-const DonationList = ({ donations, coin }) => { 
-  const [searchName, setSearchName] = useState(""); 
+const DonationList = ({ donations, coin, onDelete, onEditStart }) => {
+  const [searchName, setSearchName] = useState("");
   const [sortConfig, setSortConfig] = useState({ key: 'date', direction: 'desc' });
 
  const filteredAndSortedDonations = [...donations]
@@ -23,7 +24,7 @@ const DonationList = ({ donations, coin }) => {
         aValue = new Date(aValue);
         bValue = new Date(bValue);
       }
-      
+
       if (aValue < bValue) {
         return sortConfig.direction === 'asc' ? -1 : 1;
       }
@@ -40,7 +41,7 @@ const DonationList = ({ donations, coin }) => {
     }
     setSortConfig({ key, direction });
   };
-  
+
   return (
     <div className="donation-list">
       <h2>רשימת תרומות</h2>
@@ -50,6 +51,7 @@ const DonationList = ({ donations, coin }) => {
         placeholder="חפש תרומה לפי שם"
         value={searchName}
         onChange={(e) => setSearchName(e.target.value)}
+        className="donation-search-input"
       />
 
       <div>
@@ -61,11 +63,11 @@ const DonationList = ({ donations, coin }) => {
         </button>
       </div>
 
-      {/* 3. התיקון המרכזי - שימוש בקומפוננטה Don */}
       <ul>
+        {/* **התיקון כאן:** שנה את key={donation.id} ל- key={donation._id} */}
         {filteredAndSortedDonations.map((donation) => (
-          <li key={donation.id}>
-            <Don r={donation} coin={coin} />
+          <li key={donation._id}>
+            <Don r={donation} coin={coin} onDelete={onDelete} onEditStart={onEditStart} />
           </li>
         ))}
       </ul>
